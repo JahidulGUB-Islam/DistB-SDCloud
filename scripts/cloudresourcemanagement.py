@@ -143,7 +143,7 @@ OPENFLOW_SDN_CONTROLLER_URL = "http://localhost:8181"
 def set_flow_rule(src_ip, dst_ip, action):
     flow_rule = {"priority": 100, "ip-src": src_ip, "ip-dst": dst_ip, "action": action}
     requests.post(
-        f"{OPENFLOW_SDN_CONTROLLER_URL}/restconf/config/opendaylight-inventory:nodes/node/openflow:1/table/0/flow",
+        f"{OPENFLOW_SDN_CONTROLLER_URL}/restconf/config/openFlow-inventory:nodes/node/openflow:1/table/0/flow",
         json=flow_rule,
     )
 
